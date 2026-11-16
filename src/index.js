@@ -4,14 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+async function enableMocking() {
+  const { worker } = await import('./mocks/browser')
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+  return worker.start({
+    onUnhandledRequest: 'bypass',
+    serviceWorker: {
+      url: `${process.env.PUBLIC_URL}/mockServiceWorker.js`,
+    },
+  })
+}
+
+enableMocking().then(() => {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+})
+
 reportWebVitals();

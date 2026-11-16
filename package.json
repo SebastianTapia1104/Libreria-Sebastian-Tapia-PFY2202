@@ -2,6 +2,7 @@
   "name": "tiendalibros",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://SebastianTapia1104.github.io/Libreria-Sebastian-Tapia-PFY2202",
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -16,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build && node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,6 +38,20 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js"
+    }
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "msw": "^2.15.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
     ]
   }
 }

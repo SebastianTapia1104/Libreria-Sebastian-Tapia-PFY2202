@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Libreria-Sebastian-Tapia-PFY2202/static/css/main.f2505e24.css",
-    "main.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/main.cfe21738.js",
-    "static/js/209.97defd37.chunk.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/209.97defd37.chunk.js",
+    "main.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/main.cf2ab0f2.js",
+    "static/js/209.350befa8.chunk.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/209.350befa8.chunk.js",
     "static/js/453.f98c9409.chunk.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/453.f98c9409.chunk.js",
     "static/js/280.2f72000c.chunk.js": "/Libreria-Sebastian-Tapia-PFY2202/static/js/280.2f72000c.chunk.js",
     "index.html": "/Libreria-Sebastian-Tapia-PFY2202/index.html",
     "main.f2505e24.css.map": "/Libreria-Sebastian-Tapia-PFY2202/static/css/main.f2505e24.css.map",
-    "main.cfe21738.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/main.cfe21738.js.map",
-    "209.97defd37.chunk.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/209.97defd37.chunk.js.map",
+    "main.cf2ab0f2.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/main.cf2ab0f2.js.map",
+    "209.350befa8.chunk.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/209.350befa8.chunk.js.map",
     "453.f98c9409.chunk.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/453.f98c9409.chunk.js.map",
     "280.2f72000c.chunk.js.map": "/Libreria-Sebastian-Tapia-PFY2202/static/js/280.2f72000c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2505e24.css",
-    "static/js/main.cfe21738.js"
+    "static/js/main.cf2ab0f2.js"
   ]
 }

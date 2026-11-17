@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink, useParams } from 'react-router-dom';
-import { getCategorias, getLibros, leerCache, suscribirCarga, urlLibros } from './api/catalogo';
+import { getCategorias, getLibros, leerCache, suscribirCarga, urlCategorias, urlLibros } from './api/catalogo';
 import './App.css';
 
 function App() {
@@ -66,15 +66,15 @@ function App() {
 function useCategorias() {
   const [intento, setIntento] = useState(0);
   const forzarRef = useRef(false);
-  const [categorias, setCategorias] = useState(() => leerCache('/api/categories') || []);
-  const [cargando, setCargando] = useState(() => !leerCache('/api/categories'));
+  const [categorias, setCategorias] = useState(() => leerCache(urlCategorias) || []);
+  const [cargando, setCargando] = useState(() => !leerCache(urlCategorias));
   const [error, setError] = useState(null);
 
   useEffect(() => {
     let activo = true;
     const force = forzarRef.current;
     forzarRef.current = false;
-    const enCache = force ? null : leerCache('/api/categories');
+    const enCache = force ? null : leerCache(urlCategorias);
 
     if (enCache) {
       setCategorias(enCache);

@@ -30,8 +30,17 @@ function rastrear(promesa) {
   });
 }
 
+// En `npm start` esta ruta queda vacía, así que las consultas siguen en /api.
+// Al publicar, Create React App la rellena con la carpeta del sitio.
+export function basePublica() {
+  const publico = process.env.PUBLIC_URL || '';
+  return publico.endsWith('/') ? publico.slice(0, -1) : publico;
+}
+
+export const urlCategorias = `${basePublica()}/api/categories`;
+
 export function urlLibros(genre) {
-  return `/api/books?genre=${encodeURIComponent(genre)}`;
+  return `${basePublica()}/api/books?genre=${encodeURIComponent(genre)}`;
 }
 
 export function leerCache(url) {
@@ -122,7 +131,7 @@ export function getJson(url, { force = false } = {}) {
 }
 
 export function getCategorias({ force = false } = {}) {
-  return getJson('/api/categories', { force });
+  return getJson(urlCategorias, { force });
 }
 
 export function getLibros(genre, { force = false } = {}) {

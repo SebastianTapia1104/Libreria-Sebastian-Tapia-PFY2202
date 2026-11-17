@@ -11,6 +11,7 @@ jest.mock('./api/catalogo', () => ({
     oyente(0);
     return () => {};
   }),
+  urlCategorias: '/api/categories',
   urlLibros: jest.fn((genre) => `/api/books?genre=${encodeURIComponent(genre)}`),
 }));
 

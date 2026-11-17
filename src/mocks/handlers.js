@@ -1,4 +1,5 @@
 import { http, HttpResponse, delay } from 'msw';
+import { basePublica } from '../api/catalogo';
 
 const categorias = [
   {
@@ -60,12 +61,12 @@ function alternativasDe(exceptoSlug) {
 }
 
 export const handlers = [
-  http.get('/api/categories', async () => {
+  http.get(`${basePublica()}/api/categories`, async () => {
     await delay(800);
     return HttpResponse.json(categorias);
   }),
 
-  http.get('/api/books', async ({ request }) => {
+  http.get(`${basePublica()}/api/books`, async ({ request }) => {
     await delay(1000);
 
     const genre = new URL(request.url).searchParams.get('genre');

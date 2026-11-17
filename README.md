@@ -31,7 +31,7 @@ npm install
 npm start
 ```
 
-La aplicación abre en http://localhost:3000.
+La aplicación abre en http://localhost:3000. Ese comando vale igual si clonas el repositorio: en local las consultas siguen siendo `/api/categories` y `/api/books`. La carpeta del repositorio solo se antepone al compilar para GitHub Pages.
 
 ## Cómo publicarlo
 
